@@ -23,6 +23,9 @@ let imagem = document.getElementById('imagem');
 let botoes1 = document.querySelector('#div1')
 let botoes2 = document.querySelector('#div2')
 
+// let titulo2 = document.createElement('h1');
+// let parg2 = document.createElement('p');
+
 let cardFrente = document.getElementById('cardFrente');
 let cardBack = document.getElementById('cardAtras');
 let inner = document.getElementById('telaPcInner');
@@ -31,6 +34,8 @@ let telaPc = document.getElementById("telaPc");
 let tituloV;
 let pargV;
 let imgV;
+let tituloV2;
+let pargV2;
 
 let divBotaoFrente = document.createElement('div')
 divBotaoFrente.className = 'divFrente'
@@ -62,7 +67,8 @@ function aparecer(tituloE, pargE, imgE){
 
     titulo.innerText = tituloE;
     parg.innerText = pargE;
-
+    
+    imagem.style.display = 'flex';
     imagem.src = imgE;
 
     divBotaoAtras.appendChild(botaoV1)
@@ -78,12 +84,38 @@ function aparecer(tituloE, pargE, imgE){
     document.getElementById("telaPc").style.display = 'flex';
 }
 
+
+
+// function pcFechadoAparecer(tituloF, pargF, tituloT, pargT){
+//     cardBack.innerHTML = '';
+
+//     titulo.innerText = tituloT;
+//     parg.innerText = pargT;
+//     titulo2.innerText = tituloF;
+//     parg2.innerHTML= pargF;
+  
+//     imagem.style.display = 'none';
+    
+//     divBotaoAtras.appendChild(botaoF1)
+//     cardBack.appendChild(divBotaoAtras);
+//     cardBack.appendChild(titulo);
+//     cardBack.appendChild(parg);
+
+//     cardFrente.appendChild(parg2);
+//     cardFrente.appendChild(titulo2);
+//     divBotaoFrente.appendChild(botaoF2);
+//     cardFrente.appendChild(divBotaoFrente);
+    
+//     document.getElementById("telaPc").style.display = 'flex';
+// } 
+
 function aparecerSemBotao(tituloE, pargE, imgE){
     cardBack.innerHTML = '';
 
     titulo.innerText = tituloE;
-    parg.innerText = pargE;
-
+    parg.innerHTML = pargE;
+    
+    imagem.style.display = 'flex';
     imagem.src = imgE;
 
     divBotaoAtras.appendChild(botaoF1)
@@ -114,17 +146,19 @@ document.getElementById("telaPc").addEventListener('click', () =>{
     virarCard(inner);
 });
 
-let qrCode = document.getElementById('qrcode');
+let qrCode = document.querySelector("#qrcode")
 qrCode.addEventListener('targetFound', event=>{
     tituloV = 'Computador'
-    pargV = 'Um computador é um dispositivo eletrônico controlado por um programa (chamado sistema operacional) , usado para processar dados. Ele é constituído por componentes eletrônicos, especialmente circuitos integrados, miniaturizados e encaixados em pequeno pedaço de silício, usualmente chamado chip.'
-    imgV = 'https://cdn.glitch.global/0b9aebb9-96de-47b4-841a-2ecae68ff7b9/pc-removebg-preview.png?v=1689719535819'
-    imagem.style.width = '60%'
+    pargV = 'Um computador é um dispositivo eletrônico controlado por um programa (sistema operacional) usado para processar dados. Ele é feito de componentes eletrônicos, como circuitos integrados, miniaturizados e encaixados em um chip de silício. <br> <br>Placa Mãe: Dell Modelo E93839 La0601 <br>Processador: i7 3770 <br>Placa de Vídeo: nvidia quadro FX 1800 1gb ddr3 <br>Memória Ram: 4 x 4gb ddr3'
+    // tituloV2 = 'Especificações'
+    // pargV2 = 'Placa Mãe: Dell Modelo E93839 La0601 <br>Processador: i7 3770 <br>Placa de Vídeo: nvidia quadro FX 1800 1gb ddr3 <br>Memória Ram: 4 x 4gb ddr3'
+    imgV = "https://cdn.glitch.global/0b9aebb9-96de-47b4-841a-2ecae68ff7b9/WhatsApp%20Image%202023-07-21%20at%2018.00.44.jpeg?v=1689973288443"
     botoes1.style.display = 'none';
     botoes2.style.display = 'none';
-    botaoVoltar.style.display = 'none'
-    aparecerSemBotao(tituloV, pargV, imgV)
-})
+    
+    aparecerSemBotao(tituloV, pargV, imgV);
+});
+
 
 function abrirPc(){
     tituloV = 'PC aberto'
@@ -219,8 +253,6 @@ ventoinha.addEventListener('targetFound', event=>{
     tituloV = 'Ventoinha';
     pargV = 'As ventoinhas e sistemas de resfriamento são responsáveis por manter a temperatura adequada dentro do computador. Eles dissipam o calor gerado pelos componentes, como o processador e a placa de vídeo, evitando o superaquecimento e garantindo o bom funcionamento e a vida útil dos dispositivos.';
     imgV = 'https://cdn.glitch.global/0b9aebb9-96de-47b4-841a-2ecae68ff7b9/ventoinha.jfif?v=1689718904714'
-    botoes1.style.display = 'none';
-    botoes2.style.display = 'none';
     aparecer(tituloV, pargV, imgV);
 })
 
@@ -268,3 +300,15 @@ document.getElementById('placaV').addEventListener('click', function(){
     abrirPlacaV();
     virarCard(inner);
 })
+
+
+
+
+
+
+
+
+
+
+
+
