@@ -88,29 +88,29 @@ function aparecer(tituloE, pargE, imgE){
 
 
 
-function pcFechadoAparecer(tituloF, pargF, tituloT, pargT){
-    virarCard(inner);
-    cardBack.innerHTML = '';
+// function pcFechadoAparecer(tituloF, pargF, tituloT, pargT){
+//     virarCard(inner);
+//     cardBack.innerHTML = '';
 
-    titulo.innerText = tituloT;
-    parg.innerHTML= pargT;
-    titulo2.innerText = tituloF;
-    parg2.innerHTML= pargF;
+//     titulo.innerText = tituloT;
+//     parg.innerHTML= pargT;
+//     titulo2.innerText = tituloF;
+//     parg2.innerHTML= pargF;
   
-    imagem.style.display = 'none';
+//     imagem.style.display = 'none';
     
-    divBotaoAtras.appendChild(botaoF1)
-    cardBack.appendChild(divBotaoAtras);
-    cardBack.appendChild(titulo);
-    cardBack.appendChild(parg);
+//     divBotaoAtras.appendChild(botaoF1)
+//     cardBack.appendChild(divBotaoAtras);
+//     cardBack.appendChild(titulo);
+//     cardBack.appendChild(parg);
 
-    cardFrente.appendChild(parg2);
-    cardFrente.appendChild(titulo2);
-    divBotaoFrente.appendChild(botaoF2);
-    cardFrente.appendChild(divBotaoFrente);
+//     cardFrente.appendChild(parg2);
+//     cardFrente.appendChild(titulo2);
+//     divBotaoFrente.appendChild(botaoF2);
+//     cardFrente.appendChild(divBotaoFrente);
     
-    document.getElementById("telaPc").style.display = 'flex';
-} 
+//     document.getElementById("telaPc").style.display = 'flex';
+// } 
 
 function aparecerSemBotao(tituloE, pargE, imgE){
   
@@ -154,17 +154,17 @@ document.getElementById("telaPc").addEventListener('click', () =>{
     virarCard(inner);
 });
 
-let qrCode = document.querySelector("#qrcode")
-qrCode.addEventListener('targetFound', event=>{
-    tituloV = 'Computador'
-    pargV = 'Um computador é um dispositivo eletrônico controlado por um programa (sistema operacional) usado para processar dados. Ele é feito de componentes eletrônicos, como circuitos integrados, miniaturizados e encaixados em um chip de silício.'
-    tituloV2 = 'Especificações'
-    pargV2 = 'Placa Mãe: Dell Modelo E93839 La0601 <br>Processador: i7 3770 <br>Placa de Vídeo: nvidia quadro FX 1800 1gb ddr3 <br>Memória Ram: 4 x 4gb ddr3'
-    botoes1.style.display = 'none';
-    botoes2.style.display = 'none';
+// let qrCode = document.querySelector("#qrcode")
+// qrCode.addEventListener('targetFound', event=>{
+//     tituloV = 'Computador'
+//     pargV = 'Um computador é um dispositivo eletrônico controlado por um programa (sistema operacional) usado para processar dados. Ele é feito de componentes eletrônicos, como circuitos integrados, miniaturizados e encaixados em um chip de silício.'
+//     tituloV2 = 'Especificações'
+//     pargV2 = 'Placa Mãe: Dell Modelo E93839 La0601 <br>Processador: i7 3770 <br>Placa de Vídeo: nvidia quadro FX 1800 1gb ddr3 <br>Memória Ram: 4 x 4gb ddr3'
+//     botoes1.style.display = 'none';
+//     botoes2.style.display = 'none';
     
-    pcFechadoAparecer(tituloV, pargV, tituloV2, pargV2);
-});
+//     pcFechadoAparecer(tituloV, pargV, tituloV2, pargV2);
+// });
 
 
 function abrirPc(){
