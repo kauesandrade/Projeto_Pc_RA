@@ -219,6 +219,8 @@ ventoinha.addEventListener('targetFound', event=>{
     tituloV = 'Ventoinha';
     pargV = 'As ventoinhas e sistemas de resfriamento são responsáveis por manter a temperatura adequada dentro do computador. Eles dissipam o calor gerado pelos componentes, como o processador e a placa de vídeo, evitando o superaquecimento e garantindo o bom funcionamento e a vida útil dos dispositivos.';
     imgV = 'https://cdn.glitch.global/0b9aebb9-96de-47b4-841a-2ecae68ff7b9/ventoinha.jfif?v=1689718904714'
+    botoes1.style.display = 'none';
+    botoes2.style.display = 'none';
     aparecer(tituloV, pargV, imgV);
 })
 
