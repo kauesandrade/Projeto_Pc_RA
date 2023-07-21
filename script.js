@@ -64,8 +64,8 @@ botaoV2.addEventListener('click', function(){
 
 function aparecer(tituloE, pargE, imgE){
     cardBack.innerHTML = '';
-    cardFrente.removeChild(titulo2)
-    cardFrente.removeChild(parg2)
+    // cardFrente.removeChild(titulo2)
+    // cardFrente.removeChild(parg2)
 
     titulo.innerText = tituloE;
     parg.innerText = pargE;
@@ -120,8 +120,8 @@ function aparecerSemBotao(tituloE, pargE, imgE){
 
     titulo.innerText = tituloE;
     parg.innerHTML = pargE;
-    titulo2.innerText = '';
-    parg2.innerHTML= '';
+    // titulo2.innerText = '';
+    // parg2.innerHTML= '';
     
     imagem.style.display = 'flex';
     imagem.src = imgE;
