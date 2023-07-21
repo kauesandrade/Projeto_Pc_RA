@@ -23,8 +23,8 @@ let imagem = document.getElementById('imagem');
 let botoes1 = document.querySelector('#div1')
 let botoes2 = document.querySelector('#div2')
 
-// let titulo2 = document.createElement('h1');
-// let parg2 = document.createElement('p');
+let titulo2 = document.createElement('h1');
+let parg2 = document.createElement('p');
 
 let cardFrente = document.getElementById('cardFrente');
 let cardBack = document.getElementById('cardAtras');
@@ -64,6 +64,8 @@ botaoV2.addEventListener('click', function(){
 
 function aparecer(tituloE, pargE, imgE){
     cardBack.innerHTML = '';
+    cardFrente.removeChild(titulo2)
+    cardFrente.removeChild(parg2)
 
     titulo.innerText = tituloE;
     parg.innerText = pargE;
@@ -86,34 +88,40 @@ function aparecer(tituloE, pargE, imgE){
 
 
 
-// function pcFechadoAparecer(tituloF, pargF, tituloT, pargT){
-//     cardBack.innerHTML = '';
+function pcFechadoAparecer(tituloF, pargF, tituloT, pargT){
+    virarCard(inner);
+    cardBack.innerHTML = '';
 
-//     titulo.innerText = tituloT;
-//     parg.innerText = pargT;
-//     titulo2.innerText = tituloF;
-//     parg2.innerHTML= pargF;
+    titulo.innerText = tituloT;
+    parg.innerHTML= pargT;
+    titulo2.innerText = tituloF;
+    parg2.innerHTML= pargF;
   
-//     imagem.style.display = 'none';
+    imagem.style.display = 'none';
     
-//     divBotaoAtras.appendChild(botaoF1)
-//     cardBack.appendChild(divBotaoAtras);
-//     cardBack.appendChild(titulo);
-//     cardBack.appendChild(parg);
+    divBotaoAtras.appendChild(botaoF1)
+    cardBack.appendChild(divBotaoAtras);
+    cardBack.appendChild(titulo);
+    cardBack.appendChild(parg);
 
-//     cardFrente.appendChild(parg2);
-//     cardFrente.appendChild(titulo2);
-//     divBotaoFrente.appendChild(botaoF2);
-//     cardFrente.appendChild(divBotaoFrente);
+    cardFrente.appendChild(parg2);
+    cardFrente.appendChild(titulo2);
+    divBotaoFrente.appendChild(botaoF2);
+    cardFrente.appendChild(divBotaoFrente);
     
-//     document.getElementById("telaPc").style.display = 'flex';
-// } 
+    document.getElementById("telaPc").style.display = 'flex';
+} 
 
 function aparecerSemBotao(tituloE, pargE, imgE){
+  
+    titulo2.innerText = '';
+    parg2.innerText = '';
     cardBack.innerHTML = '';
 
     titulo.innerText = tituloE;
     parg.innerHTML = pargE;
+    titulo2.innerText = '';
+    parg2.innerHTML= '';
     
     imagem.style.display = 'flex';
     imagem.src = imgE;
@@ -149,14 +157,13 @@ document.getElementById("telaPc").addEventListener('click', () =>{
 let qrCode = document.querySelector("#qrcode")
 qrCode.addEventListener('targetFound', event=>{
     tituloV = 'Computador'
-    pargV = 'Um computador é um dispositivo eletrônico controlado por um programa (sistema operacional) usado para processar dados. Ele é feito de componentes eletrônicos, como circuitos integrados, miniaturizados e encaixados em um chip de silício. <br> <br>Placa Mãe: Dell Modelo E93839 La0601 <br>Processador: i7 3770 <br>Placa de Vídeo: nvidia quadro FX 1800 1gb ddr3 <br>Memória Ram: 4 x 4gb ddr3'
-    // tituloV2 = 'Especificações'
-    // pargV2 = 'Placa Mãe: Dell Modelo E93839 La0601 <br>Processador: i7 3770 <br>Placa de Vídeo: nvidia quadro FX 1800 1gb ddr3 <br>Memória Ram: 4 x 4gb ddr3'
-    imgV = "https://cdn.glitch.global/0b9aebb9-96de-47b4-841a-2ecae68ff7b9/WhatsApp%20Image%202023-07-21%20at%2018.00.44.jpeg?v=1689973288443"
+    pargV = 'Um computador é um dispositivo eletrônico controlado por um programa (sistema operacional) usado para processar dados. Ele é feito de componentes eletrônicos, como circuitos integrados, miniaturizados e encaixados em um chip de silício.'
+    tituloV2 = 'Especificações'
+    pargV2 = 'Placa Mãe: Dell Modelo E93839 La0601 <br>Processador: i7 3770 <br>Placa de Vídeo: nvidia quadro FX 1800 1gb ddr3 <br>Memória Ram: 4 x 4gb ddr3'
     botoes1.style.display = 'none';
     botoes2.style.display = 'none';
     
-    aparecerSemBotao(tituloV, pargV, imgV);
+    pcFechadoAparecer(tituloV, pargV, tituloV2, pargV2);
 });
 
 
