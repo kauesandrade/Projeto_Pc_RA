@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root{
+    --Montserrat: 'Montserrat', sans-serif;
+}
+
+#tela-pc img{
+    width: 80%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.titulo{
+    font-family:var(--Montserrat);
+    font-size: 30px;
+}
+.paragrafo{
+    font-family: var(--Montserrat);
+    font-size: 20px;
+    text-align: center;
+}
+
+.botao-pc{
+    display: flex;
+    flex-direction: column; 
+    margin: 0 50%;
+    justify-content: space-between;
+    height: 80%;
+}
+
+.flip-card {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    position: absolute;
+    z-index: 999;
+    aspect-ratio: 3 / 4;
+    width: 85%;
+    height: auto;
+    max-width: 400px;
+    perspective: 1000px;
+    border-radius: 20px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 20px;
+}
+
+.flip-card-front {
+    display: flex;
+    flex-direction: column; 
+    background-color: #010038;
+    color: white;
+    position: absolute;
+    border-radius: 20px;
+    font-family: var(--Montserrat); 
+}
+
+.flip-card-back {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    align-items: center; 
+    background-color: #010038;
+    color: white;
+    position: absolute;
+    border-radius: 20px;
+    font-family: var(--Montserrat);
+    transform: rotateX(540deg);
+}
+
+.fechar{
+    background-color: #010038;
+    border: 3px solid #010038;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 25px;
+    color: #E1E0DA;
+}
+
+.botaoDiv1{
+    display: flex;
+    gap: 5px;
+    justify-content: space-around;
+}
+
+.botoes{
+    border: solid 2px black;
+    width: 6rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    font-family: var(--Montserrat);
+    font-weight: 900;
+    color: black;
+}
+
+#hd1{
+    background-color: yellow;
+}
+#hd1:hover{
+    transition: 3s;
+    background-color: azure;
+}
+#fonte1{
+    background-color: rgb(241, 135, 241);
+}
+#processador1{
+    background-color: rgb(76, 252, 76);
+}
+#placaV{
+    background-color: rgb(98, 219, 240);
+}
+#placaM{
+    background-color: orange;
+}
+#ram{
+    background-color: rgb(224, 62, 62);
+}
+
+#imagem{
+    width: 80%;
+   border-radius: 20px;
+    
+}
+
+.divFrente{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.divAtras{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.voltar{
+    width: auto;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.2/dist/mindar-image-aframe.prod.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    
+    <div class="flip-card" id="telaPc">
+
+
+      <div class="botaoDiv1" id="div1">
+          <button id="placaM" class="botoes">Placa Mãe</button>
+          <button id="fonte1" class="botoes">Fonte</button>
+          <button id="processador1" class="botoes">Processador</button>
+      </div>
+
+      <div class="flip-card-inner" id="telaPcInner">
+        <div class="flip-card-back" id="cardFrente">
+            <img src=" " alt="Imagem" id="imagem">
+        </div>
+        <div class="flip-card-front" id="cardAtras">
+            
+        </div>
+      </div>
+
+      <div class="botaoDiv1" id="div2">
+          <button id="hd1" class="botoes">HD</button>
+          <button id="placaV" class="botoes">Placa de Video</button>
+          <button id="ram" class="botoes">RAM</button>
+      </div>
+      
+      
+    </div>
+
+
+
+
+    
+
+
+    <a-scene mindar-image="imageTargetSrc: https://cdn.glitch.global/0b9aebb9-96de-47b4-841a-2ecae68ff7b9/targets%20(1).mind?v=1689727103937;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+
+      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+
+      <a-entity id="fonte" mindar-image-target="targetIndex: 0"></a-entity>
+      <a-entity id="hd" mindar-image-target="targetIndex: 1"></a-entity>
+      <a-entity id="pc" mindar-image-target="targetIndex: 2"></a-entity>
+      <a-entity id="placa-mae" mindar-image-target="targetIndex: 3"></a-entity>
+      <a-entity id="placa-video" mindar-image-target="targetIndex: 4"></a-entity>
+      <a-entity id="processador" mindar-image-target="targetIndex: 5"></a-entity>
+      <a-entity id="ram1" mindar-image-target="targetIndex: 6"></a-entity>
+      <a-entity id="ram2" mindar-image-target="targetIndex: 7"></a-entity>
+      <a-entity id="ventoinha" mindar-image-target="targetIndex: 8"></a-entity>
+      <a-entity id="qrcode" mindar-image-target="'TargetIndex: 9"></a-entity>
+    </a-scene>
+    <script src="script.js"></script>
+  </body>
+</html>
